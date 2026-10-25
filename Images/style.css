@@ -1,0 +1,1104 @@
+:root {
+    --ivory: #F3F0E8;
+    --forest: #28362F;
+    --oak: #C9AD87;
+    --sage: #687C6A;
+    --white: #FFFFFF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 5px 50px;
+    background-color: var(--ivory);
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    width: 180px;
+    height: 80px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--ivory);
+    color: var(--forest);
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--forest);
+    text-decoration: none;
+    font-size: 24px;
+    position: relative;
+}
+
+/* Underline animation */
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--oak);
+    transition: width 0.3s ease;
+}
+
+
+nav a:hover {
+    color: var(--sage);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* page underline */
+nav a.active::after {
+    width: 100%;
+}
+
+
+
+.hero h1 {
+    font-size: 64px;
+    font-family: Georgia, serif;
+    margin-top: 0;
+}
+
+.hero {
+    background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.55), transparent 55%),
+    url("images/amg.png");
+    min-height: 680px;
+    background-size: cover;
+    padding: 50px 50px 150px;
+    background-position: 50% center;
+    color: var(--ivory);
+}
+
+.hero a {
+    display: inline-block;
+    background-color: var(--ivory);
+    color: var(--forest);
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+.hero a:hover {
+    background-color: var(--oak);
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+.fleet {
+    padding: 30px 50px 70px;
+}
+
+.fleet h2 {
+    font-size: 48px;
+    font-family: Georgia, serif;
+}
+
+.fleet-cards {
+    display: flex;
+    gap: 10px;
+}
+
+.car-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.car-card {
+    width: 33.33%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.premium-card {
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent 75%),
+        url("images/zeekr-001.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.performance-card{
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent 75%),
+        url("Images/Audi e-tron GT at Sunset.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.exotic-card {
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent 75%),
+        url("Images/pininfarina battista.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero-announcement {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+}
+
+
+.car-card h3 {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: var(--ivory);
+    font-size: 30px;
+    z-index: 1;
+}
+
+/* Zeekr 001 */
+#premium .vehicle-image {
+    height: 420px;
+}
+
+#premium .vehicle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 65%;
+}
+
+/* Audi e-tron GT */
+#performance .vehicle-image {
+    height: 420px;
+}
+
+#performance .vehicle-image img {
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+#login-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: var(--ivory);
+    color: var(--forest);
+
+    padding: 45px;
+    width: 400px;
+    max-width: 90%;
+
+    border-radius: 8px;
+    position: relative;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+#logout-link {
+    display: none;
+}
+
+#close-login {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    background: none;
+    border: none;
+
+    font-size: 28px;
+    color: var(--forest);
+    cursor: pointer;
+}
+
+#close-login:hover {
+    color: var(--sage);
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#login-form input {
+    padding: 12px;
+    font-size: 16px;
+
+    color: var(--forest);
+    background-color: var(--white);
+
+    border: 1px solid var(--oak);
+    border-radius: 4px;
+}
+
+#login-form input::placeholder {
+    color: var(--sage);
+}
+
+#login-form button {
+    padding: 12px;
+
+    background-color: var(--forest);
+    color: var(--white);
+
+    border: none;
+    border-radius: 4px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-form button:hover {
+    background-color: var(--sage);
+}
+
+
+.fleet-page {
+    padding: 10px 50px;
+}
+
+.fleet-page h1 {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    margin-bottom: 10px;
+}
+
+.fleet-page > p {
+    font-size: 20px;
+    color: var(--sage);
+}
+
+
+.fleet-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.fleet-bottom p {
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--sage);
+    margin: 0;
+}
+
+.fleet-view-btn {
+    display: inline-block;
+    padding: 15px 28px;
+    border: 1px solid var(--forest);
+    color: var(--forest);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.fleet-view-btn:hover {
+    background-color: var(--forest);
+    color: var(--ivory);
+}
+
+.fleet-nav {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid var(--oak);
+    padding-bottom: 20px;
+}
+
+.fleet-nav a {
+    font-size: 16px;
+    color: var(--forest);
+    text-decoration: none;
+
+    padding: 14px 24px;
+    border: 1px solid var(--oak);
+    border-radius: 4px;
+
+    transition: 0.2s;
+}
+
+.fleet-nav a:hover {
+    background-color: var(--forest);
+    color: var(--ivory);
+    border-color: var(--forest);
+}
+
+.vehicle-card {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.vehicle-image {
+    width: 50%;
+    height: 500px;
+    background-color: var(--white);
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.vehicle-info {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+.vehicle-info h3 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    color: var(--forest);
+    margin: 0;
+}
+
+.vehicle-info p {
+    font-size: 18px;
+    color: var(--sage);
+    margin: 0;
+}
+
+.vehicle-info a {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: var(--forest);
+    color: var(--ivory);
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 4px;
+}
+
+.vehicle-info a:hover {
+    background-color: var(--sage);
+}
+
+
+.fleet-intro {
+    background-color: var(--forest);
+    color: var(--ivory);
+    padding: 25px 50px;
+    border-radius: 0;
+    margin-bottom: 50px;
+
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+.fleet-intro > p {
+    color: var(--oak);
+}
+
+.fleet-intro .fleet-nav {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.fleet-intro .fleet-nav a {
+    color: var(--ivory);
+    border-color: var(--oak);
+}
+
+.fleet-intro .fleet-nav a:hover {
+    background-color: var(--oak);
+    color: var(--forest);
+}
+
+.battista-image {
+    height: 400px;
+}
+
+.fleet-category {
+    display: none;
+}
+
+.fleet-category.active {
+    display: block;
+}
+
+/* Reservation Page */
+
+.reserve-page {
+    padding: 60px 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.reserve-page h1 {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    color: var(--forest);
+    margin-bottom: 10px;
+}
+
+.reserve-page > p {
+    font-size: 20px;
+    color: var(--sage);
+    margin-bottom: 40px;
+}
+
+/* Reservation Form */
+
+#reservation-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--forest);
+}
+
+.form-group input,
+.form-group select {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid var(--oak);
+    border-radius: 4px;
+    background-color: var(--white);
+    color: var(--forest);
+}
+
+/* Reservation Button */
+
+.reserve-btn {
+    grid-column: 1 / -1;
+    background-color: var(--forest);
+    color: var(--ivory);
+    padding: 18px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reserve-btn:hover {
+    background-color: var(--sage);
+}
+
+.vehicle-preview {
+    display: none;
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.vehicle-preview img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.success-message {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    background-color: var(--forest);
+    color: var(--ivory);
+    padding: 18px 28px;
+    border-left: 4px solid var(--oak);
+    border-radius: 6px;
+    font-size: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+
+.payment-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 50px;
+}
+
+.payment-page h1 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    color: var(--forest);
+    margin-bottom: 10px;
+}
+
+.payment-page > p {
+    font-size: 20px;
+    color: var(--sage);
+    margin-bottom: 40px;
+}
+
+.payment-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.booking-summary,
+#payment-form {
+    background-color: var(--white);
+    padding: 30px;
+    border: 1px solid var(--oak);
+    border-radius: 8px;
+}
+
+.booking-summary h2,
+#payment-form h2 {
+    color: var(--forest);
+    margin-bottom: 25px;
+}
+
+.booking-summary p {
+    margin-bottom: 18px;
+    color: var(--forest);
+}
+
+#payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#payment-form .reserve-btn {
+    width: 100%;
+}
+
+.demo-payment-note {
+    font-size: 13px;
+    color: var(--sage);
+}
+
+@media (max-width: 768px) {
+    .payment-container {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-page {
+        padding: 40px 20px;
+    }
+}
+
+/* Booking Confirmation Page */
+
+.confirmation-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    padding: 60px 20px;
+}
+
+.confirmation-box {
+    background-color: var(--white);
+    border: 1px solid var(--oak);
+    border-radius: 10px;
+    padding: 50px;
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+}
+
+.confirmation-icon {
+    background-color: var(--forest);
+    color: var(--ivory);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    margin: 0 auto 25px;
+}
+
+.confirmation-box h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: var(--forest);
+    margin-bottom: 20px;
+}
+
+.confirmation-box h2 {
+    color: var(--forest);
+    margin: 30px 0 20px;
+}
+
+.confirmation-box p {
+    color: var(--sage);
+    margin-bottom: 12px;
+}
+
+.confirmation-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: var(--forest);
+    color: var(--ivory);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.confirmation-btn:hover {
+    background-color: var(--sage);
+}
+
+/*rent &return */
+
+
+/* Rent & Return Page */
+
+.return-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 50px;
+}
+
+.return-page h1 {
+    font-family: Georgia, serif;
+    font-size: 52px;
+    color: var(--forest);
+    margin-bottom: 10px;
+}
+
+.return-page > p {
+    font-size: 20px;
+    color: var(--sage);
+    margin-bottom: 40px;
+}
+
+.return-container {
+    background-color: var(--white);
+    border: 1px solid var(--oak);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.return-container h2 {
+    color: var(--forest);
+    margin-bottom: 20px;
+}
+
+.return-container p {
+    color: var(--sage);
+    margin-bottom: 20px;
+}
+
+#find-booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#return-details {
+    margin-top: 40px;
+    border-top: 1px solid var(--oak);
+    padding-top: 30px;
+}
+
+#return-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#return-form label {
+    color: var(--forest);
+    font-size: 16px;
+}
+
+#return-form input {
+    margin-right: 10px;
+    accent-color: var(--forest);
+}
+
+#booking-error {
+    color: #b42318;
+    margin-top: 15px;
+}
+
+#return-success {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: var(--ivory);
+    border-left: 4px solid var(--sage);
+}
+
+@media (max-width: 768px) {
+    .return-page {
+        padding: 40px 20px;
+    }
+
+    .return-container {
+        padding: 25px;
+    }
+}
+
+/* Rental Price */
+
+.rental-price {
+    grid-column: 1 / -1;
+    background-color: var(--white);
+    border: 1px solid var(--oak);
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.rental-price h2 {
+    color: var(--forest);
+    margin-bottom: 15px;
+}
+
+.rental-price p {
+    color: var(--sage);
+    margin-bottom: 10px;
+}
+
+.rental-price h3 {
+    color: var(--forest);
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+/* Payment Page Price Summary */
+
+.payment-price {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--oak);
+}
+
+.payment-price h3 {
+    color: var(--forest);
+    margin-bottom: 15px;
+}
+
+.payment-price p {
+    color: var(--sage);
+    margin-bottom: 12px;
+}
+
+.payment-price h2 {
+    color: var(--forest);
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+/* Confirmation Page Rental Price */
+
+.confirmation-price {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--oak);
+}
+
+.confirmation-price h2 {
+    color: var(--forest);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.confirmation-price h3 {
+    color: var(--forest);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+/* Return Success Notification */
+
+.return-notification {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background-color: var(--forest);
+    color: var(--ivory);
+    padding: 18px 25px;
+    border-left: 5px solid var(--oak);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 9999;
+    animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+.error-notification {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+
+    background-color: #28362F;
+    color: #F3F0E8;
+
+    padding: 18px 25px;
+    border-left: 5px solid #C76B60;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    font-size: 16px;
+    font-weight: 500;
+
+    z-index: 9999;
+    animation: slideIn 0.4s ease;
+}
+
+
+/* =========================
+   ABOUT US PAGE
+========================= */
+
+/* Hero Section */
+
+.about-hero {
+    min-height: 600px;
+    background: linear-gradient(
+        rgba(20, 30, 25, 0.65),
+        rgba(20, 30, 25, 0.65)
+    ), url("images/zeekr-001.png");
+
+    background-size: cover;
+    background-position: center 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about-hero-content {
+    color: var(--ivory);
+}
+
+.about-hero-content p {
+    color: var(--oak);
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.about-hero-content h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.about-hero-content h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Who We Are */
+
+.about-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 90px 25px;
+    text-align: center;
+}
+
+.about-intro h2 {
+    font-size: 36px;
+    color: var(--forest);
+    margin-bottom: 25px;
+}
+
+.about-intro p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* Mission Section */
+
+.about-mission {
+    background-color: var(--forest);
+    color: var(--ivory);
+    padding: 90px 25px;
+}
+
+.mission-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission-content h2 {
+    font-size: 36px;
+    color: var(--oak);
+    margin-bottom: 25px;
+}
+
+.mission-content p {
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* Why Choose Us */
+
+.about-features {
+    padding: 90px 30px;
+    text-align: center;
+}
+
+.about-features h2 {
+    font-size: 36px;
+    color: var(--forest);
+    margin-bottom: 45px;
+}
+
+.about-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-feature-card {
+    background: white;
+    border: 1px solid var(--oak);
+    padding: 35px 25px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.about-feature-card:hover {
+    transform: translateY(-6px);
+}
+
+.about-feature-card h3 {
+    color: var(--forest);
+    margin-bottom: 15px;
+}
+
+.about-feature-card p {
+    line-height: 1.7;
+}
+
+/* Contact / CTA */
+
+.about-contact {
+    background-color: var(--ivory);
+    padding: 90px 25px;
+    text-align: center;
+}
+
+.about-contact h2 {
+    color: var(--forest);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-contact p {
+    margin-bottom: 35px;
+    font-size: 17px;
+}
+
+.about-reserve-btn {
+    display: inline-block;
+    background-color: var(--forest);
+    color: var(--ivory);
+    padding: 16px 35px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.about-reserve-btn:hover {
+    background-color: var(--sage);
+}
+
+/* Responsive Layout */
+
+@media (max-width: 768px) {
+    .about-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-intro,
+    .about-mission,
+    .about-features,
+    .about-contact {
+        padding: 60px 20px;
+    }
+}

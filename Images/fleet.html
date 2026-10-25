@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AZoom Car Rental</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="jscript.js" defer></script>
+</head>
+
+
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="images/azoom-logo.png" alt="AZoom Car Rental">
+        </a>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="fleet.html">Our Fleet</a>  
+            <a href="reserve.html">Reserve</a>
+            <a href="rent-return.html">Rent & Return</a>
+            <a href="about.html">About Us</a>
+            <a href="#" id="login-link">Login</a>
+            <a href="#" id="logout-link">Logout</a>
+            
+
+        </nav>
+    </header>
+
+    <main>
+
+    <section class="fleet-page">
+
+        <div class="fleet-intro">
+            <h1>Our Fleet</h1>
+            <p>Discover our collection of electric vehicles.</p>
+            <nav class="fleet-nav">
+            <a href="#all">All Vehicles</a>
+            <a href="#premium">Premium Electric</a>
+            <a href="#performance">Performance Electric</a>
+            <a href="#exotic">Exotic Electric</a>
+            </nav>
+        </div>
+
+        <section id="premium" class="fleet-category active">
+
+            <h2>Premium Electric</h2>
+            <article class="vehicle-card">
+                <div class="vehicle-image">
+                    <img src="images/zeekr-001.png" alt="Zeekr 001">
+                </div>
+                <div class="vehicle-info">
+                    <h3>Zeekr 001</h3>
+                    <p>Luxury electric grand tourer.</p>
+                    <p>From SGD 170 / day</p>
+
+                    <a href="#">Reserve Now</a>
+                </div>
+            </article>
+        </section>
+        
+        <section id="performance" class="fleet-category active">
+    <h2>Performance Electric</h2>
+
+    <article class="vehicle-card">
+
+        <div class="vehicle-image">
+            <img src="Images/Audi e-tron GT at Sunset.png" alt="Audi e-tron GT">
+        </div>
+
+        <div class="vehicle-info">
+            <h3>Audi e-tron GT</h3>
+            <p>Where electric performance meets refined luxury.</p>
+            <p>From SGD 280 / day</p>
+            <a href="#">Reserve Now</a>
+        </div>
+
+    </article>
+
+    </section>
+
+        <section id="exotic" class="fleet-category active">
+            <h2>Exotic Electric</h2>
+
+            <article class="vehicle-card">
+
+                <div class="vehicle-image battista-image">
+                    <img src="Images/pininfarina battista.png" alt="Pininfarina Battista">
+                </div>
+                
+
+                <div class="vehicle-info">
+                    <h3>Pininfarina Battista</h3>
+                    <p>An extraordinary all-electric Italian hypercar.</p>
+                    <p>From SGD 1,200 / day</p>
+
+                    <a href="#">Reserve Now</a>
+                </div>
+
+            </article>
+
+    </section>
+
+    </section>
+
+    </main>
+
+    
+
+    <footer>
+        <p>&copy; 2026 AZoom Car Rental</p>
+    </footer>
+
+    <div id="login-modal">
+
+    <div class="login-box">
+        <button type="button" id="close-login">&times;</button>
+        <h2>Welcome back zoomer </h2>
+        <p>Please sign in to your AZoom account.</p>
+
+        <form id="login-form">
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit">Login</button>
+            
+        </form>
+    </div>
+
+</div>
+</body>
+
+
+</html>
