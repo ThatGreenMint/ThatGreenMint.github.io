@@ -140,7 +140,7 @@ nav a.active::after {
 .premium-card {
     background-image:
         linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent 75%),
-        url("images/zeekr-001.png");
+        url("Images/zeekr-001.png");
     background-size: cover;
     background-position: center;
 }

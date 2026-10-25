@@ -142,13 +142,13 @@ if (vehicleSelect && carImage && preview) {
         const selectedCar = vehicleSelect.value;
 
         if (selectedCar === "zeekr") {
-            carImage.src = "images/zeekr-001.png";
+            carImage.src = "Images/zeekr-001.png";
         }
         else if (selectedCar === "audi") {
-            carImage.src = "images/Audi e-tron GT at Sunset.png";
+            carImage.src = "Images/Audi e-tron GT at Sunset.png";
         }
         else if (selectedCar === "battista") {
-            carImage.src = "images/pininfarina battista.png";
+            carImage.src = "Images/pininfarina battista.png";
         }
         else {
             preview.style.display = "none";
